@@ -23,7 +23,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
     font-size: 18px;
     font-family: Hanken Grotesk;
 }
@@ -38,7 +38,6 @@
 }
 
 .card {
-    width: 70vw;
     box-shadow: 5px 5px 50px grey;
     border-radius: 30px; 
 }
@@ -48,35 +47,162 @@
 }
 
 .content .result {
-    width: 76%;
-    padding: 4rem;
+    width: 240px;
+    height: 360px;
+    padding: 2.5rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
     border-radius: 30px;
     background: linear-gradient(
         0deg,
-        hsl(252, 100%, 67%),
-        hsl(241, 81%, 54%)
+        hsl(241, 81%, 54%),
+        hsl(252, 100%, 67%)
     );
+}
+
+.content .result .title {
+    margin-bottom: 100px;
+    margin-top: -100px;
+    font-size: 20px;
+    font-weight: normal;
+    color: var(--Light-lavender);
 }
 
 .content .result .circle {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    margin-top: -70px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    margin-left: 48px;
     border-radius: 50%;
     background: linear-gradient(
         0deg,
-        hsla(256, 72%, 46%, 1),
-        hsla(241, 72%, 46%, 0)
+        hsla(241, 72%, 46%, 0),
+        hsla(256, 72%, 46%, 1)
     );
 }
 
-.content .summary {
-    padding: 30px;
-    width: 90%;
+.content .result .circle .valor {
+    font-size: 50px;
 }
 
-.content .summary .desc {
+.content .result .circle .percentage {
+    font-size: 13px;
+    margin-top: -9px;
+    color: var(--Light-lavender)
+}
+
+.content .result .great {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.content .result .scored {
+    margin-top: 13px;
+    font-weight: 2px;
+    font-style: normal;
+    margin-bottom: -70px;
+    color: var(--Light-lavender);
+}
+
+.content .summary {
+    padding: 2.5rem;
+    font-style: normal;
+}
+
+.content .summary h1 {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.content .summary .desc .reaction {
     display: flex;
+    justify-content: center;
+}
+
+.content .summary .desc .reaction {
+    display: flex;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(255, 87, 87, 0.1);
+    border-radius: 6px;
+}
+
+.content .summary .desc .reaction .text {
+    color: var(--Light-red);
+    margin-right: 70px;
+}
+
+.content .summary .desc .memory {
+    display: flex;
+    margin-top: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(153, 255, 31, 0.1);
+    border-radius: 6px;
+}
+
+.content .summary .desc .memory .text {
+    color: var(--Orangey-yellow);
+    margin-right: 72px;
+}
+
+.content .summary .desc .verbal {
+    display: flex;
+    margin-top: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(0, 107, 189, 0.1);
+    border-radius: 6px;
+}
+
+.content .summary .desc .verbal .text {
+    color: var(--Green-teal);
+    margin-right: 85px;
+}
+
+.content .summary .desc .visual {
+    display: flex;
+    margin-top: 8px;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: rgba(17, 35, 212, 0.1);
+    border-radius: 6px;
+}
+
+.content .summary .desc .visual .text {
+    color: var(--Cobalt-blue);
+    margin-right: 86px;
+}
+
+.content .summary .desc .text {
+     margin: 8px;
+}
+
+.content .summary .continue p {
+    text-align: center;
+    font-size: 16px;
+    padding: 12px;
+    margin-top: 50px;
+    color: white;
+    background-color: var(--Dark-gray-blue);
+    border-radius: 32px;
+}
+
+.content .summary .desc .values,
+.content .summary .desc .value {
+    margin-top: 9px;
+}
+
+.content .summary .desc .values {
+    color: var(--Light-lavender);
 }
