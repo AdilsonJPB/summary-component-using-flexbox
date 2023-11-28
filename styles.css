@@ -1,273 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&family=Inter:wght@700&family=Lexend+Deca&display=swap');
 :root {
+   /*Primary*/
 
-    /*Primary*/
     --Light-red: hsl(0, 100%, 67%);
-    --Orangey-yellow: hsl(39, 100%, 56%);
+    --orange-animation: hsl(39, 100%, 56%);
     --Green-teal: hsl(166, 100%, 37%);
     --Cobalt-blue: hsl(234, 85%, 45%);
 
-
     /*Gradients*/
-    --Light-slate-blue-bc: hsl(252, 100%, 67%);
-    --Light-royal-blue-bc: hsl(241, 81%, 54%);
-    --Violet-blue-cc: hsla(256, 72%, 46%, 1);
-    --Persian-blue-cc: hsla(241, 72%, 46%, 0);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue: hsla(256, 72%, 46%, 1);
+    --Persian-blue: hsla(241, 72%, 46%, 0);
 
     /*Neutral*/
+
     --White: hsl(0, 0%, 100%);
     --Pale-blue: hsl(221, 100%, 96%);
     --Light-lavender: hsl(241, 100%, 89%);
     --Dark-gray-blue: hsl(224, 30%, 27%);
+
 }
 
 * {
     padding: 0;
     margin: 0;
-    /* box-sizing: border-box; */
-    font-size: 18px;
-    font-family: Hanken Grotesk;
 }
 
-.container {
+body {
     height: 100vh;
-    background-color: var(--White);
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: var(--White);
+    font-family: 'Hanken Grotesk', sans-serif;
 }
 
-.card {
-    box-shadow: 5px 5px 50px grey;
-    border-radius: 30px;
-    height: 428px;
+.results-summary {
+    background-color: var(--White);
+    box-shadow: 1px 1px 20px;
+    border-radius: 20px;
 }
 
-.content {
+.results-summary__content {
     display: flex;
 }
 
-.content .result {
-    width: 260px;
-    height: 423px;
-    padding: 0.2rem 2rem 0.1rem 2rem;
+.content__result {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    color: var(--White);
     align-items: center;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: white;
-    border-radius: 30px;
-    background: linear-gradient(
+    gap: 20px;
+    border-radius: 20px;
+    background-image: linear-gradient(
         0deg,
         hsl(241, 81%, 54%),
-        hsl(252, 100%, 67%)
-    );
+        hsl(252, 100%, 67%));
 }
 
-.content .result .title {
-    margin-bottom: 100px;
-    margin-top: -100px;
+.content__result__titulo {
     font-size: 20px;
-    font-weight: normal;
-    color: var(--Light-lavender);
+    color: var(--Pale-blue);
 }
 
-.content .result .circle {
+.content__result__circulo {
     width: 150px;
     height: 150px;
-    margin-top: -70px;
+    border-radius: 50%;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    background: linear-gradient(
+    text-align: center;
+    background-image: linear-gradient(
         0deg,
         hsla(241, 72%, 46%, 0),
-        hsla(256, 72%, 46%, 1)
-    );
+        hsla(256, 72%, 46%, 1));
 }
 
-.content .result .circle .valor {
+.content__result__circulo__paragrafo {
     font-size: 50px;
 }
 
-.content .result .circle .percentage {
-    font-size: 13px;
-    margin-top: -9px;
-    color: var(--Light-lavender)
-}
-
-.content .result .great {
-    margin-top: 20px;
-    font-size: 25px;
-}
-
-.content .result .scored {
-    margin-top: 13px;
-    font-weight: 2px;
-    font-style: normal;
-    margin-bottom: -70px;
+.content__result__circulo__desc {
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: -10px;
     color: var(--Light-lavender);
 }
 
-.content .summary {
-    padding: 2.5rem;
-    font-style: normal;
+.content__result__titulo-nota {
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.content__result__paragrafo-desc {
+    color: var(--Light-lavender);
+    font-size: 18px;
+}
+
+.content__summary {
     display: flex;
     flex-direction: column;
+    padding: 3rem;
 }
 
-.content .summary h1 {
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.content .summary .desc .reaction {
+.content__summary__desc {
     display: flex;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgba(255, 87, 87, 0.1);
-    border-radius: 6px;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.content .summary .desc .reaction .text {
+.reac {
+    display: flex;
+    gap: 3px;
+}
+
+.content__summary__desc__reaction {
+    display: flex;
+    padding: 13px;
+    border-radius: 10px;
+    gap: 80px;
+    background-color: hsl(0, 100%, 96%);
+}
+
+.content__summary__desc__reaction__texto {
     color: var(--Light-red);
-    margin-right: 70px;
 }
 
-.content .summary .desc .memory {
+.memo {
     display: flex;
-    margin-top: 10px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgba(153, 255, 31, 0.1);
-    border-radius: 6px;
+    gap: 3px;
 }
 
-.content .summary .desc .memory .text {
-    color: var(--Orangey-yellow);
-    margin-right: 72px;
-}
-
-.content .summary .desc .verbal {
+.content__summary__desc__memory {
     display: flex;
-    margin-top: 10px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgba(0, 107, 189, 0.1);
-    border-radius: 6px;
+    padding: 13px;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-color: hsl(0, 100%, 96%);
 }
 
-.content .summary .desc .verbal .text {
-    color: var(--Green-teal);
-    margin-right: 85px;
+.content__summary__desc__reaction__texto {
+    color: var(--Light-red);
 }
 
-.content .summary .desc .visual {
+.verb {
     display: flex;
-    margin-top: 10px;
-    padding: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    background-color: rgba(17, 35, 212, 0.1);
-    border-radius: 6px;
+    gap: 3px;
 }
 
-.content .summary .desc .visual .text {
-    color: var(--Cobalt-blue);
-    margin-right: 86px;
+.content__summary__desc__verbal {
+    display: flex;
+    padding: 13px;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-color: hsl(0, 100%, 96%);
 }
 
-.content .summary .desc .text {
-     margin: 8px;
+.content__summary__desc__reaction__texto {
+    color: var(--Light-red);
 }
 
-.content .summary .continue p {
-    text-align: center;
-    font-size: 16px;
-    padding: 12px;
-    margin-top: 30px;
-    color: white;
-    background-color: var(--Dark-gray-blue);
-    border-radius: 32px;
+.visu {
+    display: flex;
+    gap: 3px;
 }
 
-.content .summary .desc .values,
-.content .summary .desc .value {
-    margin-top: 9px;
+.content__summary__desc__visual {
+    display: flex;
+    padding: 13px;
+    border-radius: 10px;
+    justify-content: space-between;
+    background-color: hsl(0, 100%, 96%);
 }
 
-.content .summary .desc .values {
-    color: var(--Light-lavender);
-}
-
-@media (max-width: 900px) {
-    * {
-        margin: 0;
-        padding: 0;
-        vertical-align: baseline;
-        box-sizing: inherit;
-    }
-
-    .container {
-        width: 100%;
-        display: flex;
-    }
-
-    .container .card {
-        width: 100%;
-        height: 100%;
-        border-radius: 0;
-        box-shadow: none;
-    }
-
-    .container .card .content {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .content .result {
-        width: 100%;
-        height: 480px;
-        border-bottom-left-radius: 10%;
-        border-bottom-right-radius: 10%;
-        margin-top: -130px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content .result .scored {
-        font-size: 17px;
-    }
-
-    .content .result .scored {
-        margin-bottom: -210px;
-    }
-
-    .content .summary .desc {
-        margin-top: -20px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .content .summary .desc .reaction,
-    .content .summary .desc .memory,
-    .content .summary .desc .verbal,
-    .content .summary .desc .visual {
-        margin-top: 16px;
-    }
-
-    .content .continue {
-        margin-top: -1px;
-        display: flex;
-        justify-content: center;
-    }
+.content__summary__desc__reaction__texto {
+    color: var(--Light-red);
 }

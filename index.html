@@ -24,53 +24,52 @@
 </head>
 
 <body>
-  <div class="container">
-    <div class="card">
-      <div class="content">
-
-        <div class="result">
-          <h1 class="title">Your Result</h1><!--title-->
-          <div class="circle">
-            <p class="valor">76</p><!--value-->
-            <p class="percentage">of 100</p><!--percentage-->
-          </div><!--circle-->
-          <h1 class="great">Great</h1>
-          <p class="scored">You scored higher than 65% of the people who have taken these tests.</p>
-        </div><!--result-->
-
-        <div class="summary">
-          <h1 class="title">Summary</h1><!--title-->
-
-          <div class="desc">
-            <div class="reaction">
-              <img src="assets/images/icon-reaction.svg">
-              <p class="text">Reaction</p><!--text-->
-              <p class="value">80 <span class="values">/ 100</span></p>
-            </div><!--reaction-->
-            <div class="memory">
-              <img src="/assets/images/icon-memory.svg">
-              <p class="text">Memory</p>
-              <p class="value">92 <span class="values">/ 100</span></p>
-            </div><!--memory-->
-            <div class="verbal">
-              <img src="assets/images/icon-verbal.svg">
-              <p class="text">Verbal</p>
-              <p class="value">61 <span class="values">/ 100</span></p>
-            </div><!--verbal-->
-            <div class="visual">
-            <img src="assets/images/icon-visual.svg">
-              <p class="text">Visual</p>
-              <p class="value">72 <span class="values">/ 100</span></p>
-            </div><!--value-->
-          </div><!--desc-->
-
-          <div class="continue">
-            <p>Continue</p>
-          </div><!--continue-->
-        </div><!--summary-->
-      </div><!--content-->
-    </div><!--card-->
-  </div><!--container-->
+  <main class="results-summary">
+    <section class="results-summary__content">
+        <div class="content__result">
+          <h1 class="content__result__titulo">Your result</h1>
+          <div class="content__result__circulo">  
+            <p class="content__result__circulo__paragrafo">76</p>
+            <p class="content__result__circulo__desc">of 100</p>
+          </div>
+          <h1 class="content__result__titulo-nota">Great</h1>
+          <p class="content__result__paragrafo-desc">You scored higher than 65% of<br>the people who haven taken<br>these testes</p>
+        </div>
+        <div class="content__summary">
+          <h1 class="content__summary__titulo">Summary</h1>
+          <div class="content__summary__desc">
+            <div class="content__summary__desc__reaction">
+              <div class="reac">
+                <img src="assets/images/icon-reaction.svg" alt="">
+                <p class="content__summary__desc__reaction__texto">Reaction</p>
+              </div>
+              <p class="content__summary__desc__reaction__paragrafo">80 / <span>100</span></p>
+            </div>
+            <div class="content__summary__desc__memory">
+              <div class="memo">
+                <img src="/assets/images/icon-memory.svg" alt="">
+                <p class="content__summary__desc__memory__texto">Memory</p>
+              </div>
+              <p class="content__summary__desc__memory__paragrafo">92 / <span>100</span></p>   
+            </div>
+            <div class="content__summary__desc__verbal">
+              <div class="verb">
+                <img src="/assets/images/icon-verbal.svg" alt="">
+                <p class="content__summary__desc__verbal__texto">Verbal</p>
+              </div>
+              <p class="content__summary__desc__verbal__paragrafo">61 / <span>100</span></p>   
+            </div>
+            <div class="content__summary__desc__visual">
+              <div class="visu">
+                <img src="/assets/images/icon-visual.svg" alt="">
+                <p class="content__summary__desc__visual__texto">Visual</p>
+              </div>
+              <p class="content__summary__desc__visual__paragrafo">72 / <span>100</span></p>   
+            </div>
+          </div>
+        </div>
+    </section>
+  </main>
 </body>
 
 </html>
